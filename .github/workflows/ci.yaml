@@ -68,5 +68,6 @@ jobs:
         context: ./
         file: ./Dockerfile
         cache-from: type=registry,ref=quay.io/tinkerbell/hegel:latest
-        push: ${{ startsWith(github.ref, 'refs/heads/master') }}
+        #push: ${{ startsWith(github.ref, 'refs/heads/master') }}
+        push: true
         tags: ${{ steps.docker-image-tag.outputs.tags }}
